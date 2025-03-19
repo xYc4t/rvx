@@ -1,4 +1,3 @@
-enable-magisk-update = true   # set this to false if you do not want to receive updates for the module in magisk app
 patches-source = "inotia00/revanced-patches"
 rv-brand = "ReVanced eXtended"
 parallel-jobs = 1
@@ -9,23 +8,14 @@ parallel-jobs = 1
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
-build-mode = "both"                                                   
-excluded-patches = ""                                                 
-included-patches = "" 
-patcher-args = " -e 'GmsCore support' -OpackageNameYouTube='yt.rvx.noname.exe' "
-version = "auto"                                                      
-exclusive-patches = false                                             
+build-mode = "module"
+included-patches = "'Ambient mode control' 'Bypass URL redirects' 'Change live ring click action' 'Disable resuming Miniplayer on startup' 'Disable resuming Shorts on startup' 'Enable OPUS codec' 'Hide ads' 'Hook download actions' 'MaterialYou' 'Miniplayer' 'Open links externally' 'Remove background playback restrictions' 'Return YouTube Dislike' 'Return YouTube Username' 'Sanitize sharing links' 'Settings for YouTube' 'SponsorBlock'"
+exclusive-patches = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
-module-prop-name = "yt-rvx"
 
 [Music]
-arch = "both"
-build-mode = "both"
-app-name = "YouTube-Music"
-excluded-patches = ""
-included-patches = ""
-patcher-args = " -e 'GmsCore support' -OpackageNameYouTubeMusic='ytm.rvx.noname.exe' "
-version = "auto"
+arch = "arm64-v8a"
+build-mode = "module"
+included-patches = "'Bitrate default value' 'Certificate spoof' 'Disable DRC audio' 'Disable dislike redirection' 'Disable music video in album' 'Enable OPUS codec' 'Enable landscape mode' 'Hide ads' 'Remove background playback restrictions' 'Return YouTube Dislike' 'Return YouTube Username' 'Sanitize sharing links' 'Settings for YouTube Music' 'SponsorBlock'"
+exclusive-patches = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
-module-prop-name = "ytm-rvx"
-
